@@ -7,8 +7,10 @@
 
 import UIKit
 
-class FillYourProfileVC: UIViewController {
+class FillYourProfileVC: UIViewController,UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    lazy var profileImage = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -24,25 +26,49 @@ class FillYourProfileVC: UIViewController {
             make.width.equalToSuperview()
         }
         
-        lazy var profileImage = UIImageView()
         view.addSubview(profileImage)
         profileImage.image = UIImage(named: "profile")
+        profileImage.layer.masksToBounds = false
+        profileImage.layer.cornerRadius = 50
+        profileImage.clipsToBounds = true
         profileImage.snp.makeConstraints { make in
-            make.top.equalTo(headerView.snp.bottom).offset(8)
+            make.top.equalTo(headerView.snp.bottom).offset(16)
             make.centerX.equalToSuperview()
-            make.height.width.equalTo(view.frame.size.height/5)
+            make.height.width.equalTo(100)
+        }
+        profileImage.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(selectPhoto))
+        profileImage.addGestureRecognizer(gesture)
+
+        
+        lazy var continueButton = CustomPrimaryLargeButton(title: "Continue", currentVC: self, destinationVC: PinMapVC())
+        view.addSubview(continueButton)
+        continueButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().offset(-32)
+            make.bottom.equalToSuperview().offset(-32)
         }
         
+        lazy var scrollView = UIScrollView()
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(profileImage.snp.bottom).offset(32)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(continueButton.snp.top).offset(-16)
+        }
+        scrollView.contentSize = CGSize(width: view.frame.size.width, height: view.frame.size.height*0.8)
+        scrollView.backgroundColor = .white
+        
         lazy var nameText = CustomTextField(placeholder: "Ful Name")
-        view.addSubview(nameText)
+        scrollView.addSubview(nameText)
         nameText.snp.makeConstraints { make in
-            make.top.equalTo(profileImage.snp.bottom).offset(16)
+            make.top.equalTo(scrollView.snp.top).offset(8)
             make.width.equalToSuperview().offset(-32)
             make.centerX.equalToSuperview()
         }
         
         lazy var nickNameText = CustomTextField(placeholder: "Nick Name")
-        view.addSubview(nickNameText)
+        scrollView.addSubview(nickNameText)
         nickNameText.snp.makeConstraints { make in
             make.top.equalTo(nameText.snp.bottom).offset(16)
             make.width.equalToSuperview().offset(-32)
@@ -50,7 +76,7 @@ class FillYourProfileVC: UIViewController {
         }
         
         lazy var birthDayText = CustomTextField(placeholder: "Date of Birth", leftImgName: "email")
-        view.addSubview(birthDayText)
+        scrollView.addSubview(birthDayText)
         birthDayText.snp.makeConstraints { make in
             make.top.equalTo(nickNameText.snp.bottom).offset(16)
             make.width.equalToSuperview().offset(-32)
@@ -59,40 +85,48 @@ class FillYourProfileVC: UIViewController {
         
         
         lazy var emailText = CustomTextField(placeholder: "Email", leftImgName: "email")
-        view.addSubview(emailText)
+        scrollView.addSubview(emailText)
         emailText.snp.makeConstraints { make in
             make.top.equalTo(birthDayText.snp.bottom).offset(16)
             make.width.equalToSuperview().offset(-32)
             make.centerX.equalToSuperview()
         }
         
+        
         lazy var passwordText = CustomTextField(placeholder: "Password", leftImgName: "password", isSecureText: true)
-        view.addSubview(passwordText)
+        scrollView.addSubview(passwordText)
         passwordText.snp.makeConstraints { make in
             make.top.equalTo(emailText.snp.bottom).offset(16)
             make.width.equalToSuperview().offset(-32)
             make.centerX.equalToSuperview()
         }
         
-       
-        
-        
-//Bottom Tools--------------------------------
-        
-        
-        
-        lazy var continueButton = CustomPrimaryLargeButton(title: "Continue", currentVC: self, destinationVC: OpeningVC())
-        view.addSubview(continueButton)
-        continueButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
+        lazy var phoneText = CustomTextField(placeholder: "Phone Number", leftImgName: "email")
+        scrollView.addSubview(phoneText)
+        phoneText.snp.makeConstraints { make in
+            make.top.equalTo(passwordText.snp.bottom).offset(16)
             make.width.equalToSuperview().offset(-32)
-            make.bottom.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()
+        }
+        
+        lazy var genderText = CustomTextField(placeholder: "Gender", leftImgName: "email")
+        scrollView.addSubview(genderText)
+        genderText.snp.makeConstraints { make in
+            make.top.equalTo(phoneText.snp.bottom).offset(16)
+            make.width.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()
         }
         
         
         
-        
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let imagePick = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        profileImage.image = imagePick
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func buttonTapped(){
         Presentation.presentVC(currentVC: self, destinationVC: OpeningVC(), toDirection: .right)
     }
@@ -104,6 +138,14 @@ class FillYourProfileVC: UIViewController {
     
     @objc func forgetButtonTapped(){
         Presentation.presentVC(currentVC: self, destinationVC: OpeningVC(), toDirection: .right)
+    }
+    
+    @objc func selectPhoto(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker, animated: true)
     }
     
 }

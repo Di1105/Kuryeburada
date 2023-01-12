@@ -34,6 +34,7 @@ class OpeningVC: UIViewController {
         logoLabel.backgroundColor = .white
         logoLabel.layer.borderColor = UIColor.primaryGray?.cgColor
         logoLabel.layer.borderWidth = 1
+        
         animationView = .init(name: "wait")
         animationView!.contentMode = .scaleAspectFit
         animationView!.loopMode = .loop

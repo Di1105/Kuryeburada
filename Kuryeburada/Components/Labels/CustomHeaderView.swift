@@ -36,7 +36,7 @@ class CustomHeaderView: UIView {
     private func configure(){
         
         snp.makeConstraints { make in
-            make.height.equalTo(120)
+            make.height.equalTo(100)
         }
         
         lazy var backButton = UIButton()

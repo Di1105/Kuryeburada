@@ -50,6 +50,11 @@
 		C6C3C83B296DA87A000AE4CE /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C83A296DA87A000AE4CE /* CreateAccountVC.swift */; };
 		C6C3C83D296FF453000AE4CE /* LogInAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C83C296FF451000AE4CE /* LogInAccountVC.swift */; };
 		C6C3C83F296FFD77000AE4CE /* FillYourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C83E296FFD77000AE4CE /* FillYourProfileVC.swift */; };
+		C6C3C84129701310000AE4CE /* PinMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C84029701310000AE4CE /* PinMapVC.swift */; };
+		C6C3C84329702398000AE4CE /* CreatePinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C84229702398000AE4CE /* CreatePinVC.swift */; };
+		C6C3C84629703F34000AE4CE /* CHIOTPField in Frameworks */ = {isa = PBXBuildFile; productRef = C6C3C84529703F34000AE4CE /* CHIOTPField */; };
+		C6C3C84829704254000AE4CE /* SetFingerPrintVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C84729704254000AE4CE /* SetFingerPrintVC.swift */; };
+		C6C3C84A29704D0B000AE4CE /* CongratsPopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C84929704D0A000AE4CE /* CongratsPopVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +100,10 @@
 		C6C3C83A296DA87A000AE4CE /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		C6C3C83C296FF451000AE4CE /* LogInAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAccountVC.swift; sourceTree = "<group>"; };
 		C6C3C83E296FFD77000AE4CE /* FillYourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillYourProfileVC.swift; sourceTree = "<group>"; };
+		C6C3C84029701310000AE4CE /* PinMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMapVC.swift; sourceTree = "<group>"; };
+		C6C3C84229702398000AE4CE /* CreatePinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinVC.swift; sourceTree = "<group>"; };
+		C6C3C84729704254000AE4CE /* SetFingerPrintVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFingerPrintVC.swift; sourceTree = "<group>"; };
+		C6C3C84929704D0A000AE4CE /* CongratsPopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,7 @@
 			files = (
 				C6BFB4BC296C44080059FFAE /* SnapKit in Frameworks */,
 				C60E7A3B296C4D81005754F9 /* Hero in Frameworks */,
+				C6C3C84629703F34000AE4CE /* CHIOTPField in Frameworks */,
 				C60E7A32296C4B4C005754F9 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +256,10 @@
 				C6C3C83A296DA87A000AE4CE /* CreateAccountVC.swift */,
 				C6C3C83C296FF451000AE4CE /* LogInAccountVC.swift */,
 				C6C3C83E296FFD77000AE4CE /* FillYourProfileVC.swift */,
+				C6C3C84029701310000AE4CE /* PinMapVC.swift */,
+				C6C3C84229702398000AE4CE /* CreatePinVC.swift */,
+				C6C3C84729704254000AE4CE /* SetFingerPrintVC.swift */,
+				C6C3C84929704D0A000AE4CE /* CongratsPopVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +297,7 @@
 				C6BFB4BB296C44080059FFAE /* SnapKit */,
 				C60E7A31296C4B4C005754F9 /* Lottie */,
 				C60E7A3A296C4D81005754F9 /* Hero */,
+				C6C3C84529703F34000AE4CE /* CHIOTPField */,
 			);
 			productName = Kuryeburada;
 			productReference = C6BFB49D296C41B70059FFAE /* Kuryeburada.app */;
@@ -316,6 +331,7 @@
 				C6BFB4BA296C44080059FFAE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C60E7A30296C4B4C005754F9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C60E7A39296C4D81005754F9 /* XCRemoteSwiftPackageReference "Hero" */,
+				C6C3C84429703F34000AE4CE /* XCRemoteSwiftPackageReference "CHIOTPField" */,
 			);
 			productRefGroup = C6BFB49E296C41B70059FFAE /* Products */;
 			projectDirPath = "";
@@ -360,6 +376,7 @@
 				C6C3C83B296DA87A000AE4CE /* CreateAccountVC.swift in Sources */,
 				C6C3C82F296D4A59000AE4CE /* Intro1VC.swift in Sources */,
 				C6BFB4D5296C45200059FFAE /* CustomSecondarySmallButton.swift in Sources */,
+				C6C3C84A29704D0B000AE4CE /* CongratsPopVC.swift in Sources */,
 				C6BFB4C3296C44E40059FFAE /* CustomNonEditTextView.swift in Sources */,
 				C6C3C831296D647D000AE4CE /* CustomIntroTextView.swift in Sources */,
 				C6BFB4BE296C443E0059FFAE /* CustomSearchBar.swift in Sources */,
@@ -369,10 +386,12 @@
 				C60E7A3F296C5DF0005754F9 /* WelcomeVC.swift in Sources */,
 				C6C3C83F296FFD77000AE4CE /* FillYourProfileVC.swift in Sources */,
 				C6BFB4C2296C44E40059FFAE /* CustomEditableTextView.swift in Sources */,
+				C6C3C84329702398000AE4CE /* CreatePinVC.swift in Sources */,
 				C6BFB4CA296C45020059FFAE /* CustomFirstHeadLabel.swift in Sources */,
 				C6BFB4B9296C42DE0059FFAE /* CustomColor.swift in Sources */,
 				C60E7A46296C9222005754F9 /* Font.swift in Sources */,
 				C6BFB4CB296C45020059FFAE /* CustomHeaderView.swift in Sources */,
+				C6C3C84129701310000AE4CE /* PinMapVC.swift in Sources */,
 				C6BFB4CD296C45020059FFAE /* CustomNormalHeadLabel.swift in Sources */,
 				C60E7A38296C4C1A005754F9 /* Presentation.swift in Sources */,
 				C6BFB4C4296C44E40059FFAE /* CustomTextField.swift in Sources */,
@@ -381,6 +400,7 @@
 				C6BFB4D4296C45200059FFAE /* CustomPrimaryLargeButton.swift in Sources */,
 				C6C3C829296CA5D5000AE4CE /* CustomIntroLabel.swift in Sources */,
 				C6C3C827296CA4EA000AE4CE /* IntroVC.swift in Sources */,
+				C6C3C84829704254000AE4CE /* SetFingerPrintVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +634,14 @@
 				kind = branch;
 			};
 		};
+		C6C3C84429703F34000AE4CE /* XCRemoteSwiftPackageReference "CHIOTPField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ChiliLabs/CHIOTPField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -631,6 +659,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C6BFB4BA296C44080059FFAE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		C6C3C84529703F34000AE4CE /* CHIOTPField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6C3C84429703F34000AE4CE /* XCRemoteSwiftPackageReference "CHIOTPField" */;
+			productName = CHIOTPField;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

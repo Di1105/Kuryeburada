@@ -153,7 +153,6 @@ class CreateAccountVC: UIViewController {
     
     @objc func clickButtonDidSelected(_ sender: UIButton){
         sender.backgroundColor = sender.backgroundColor == UIColor.white ? .primaryGreen : UIColor.white
-
     }
     
 }
