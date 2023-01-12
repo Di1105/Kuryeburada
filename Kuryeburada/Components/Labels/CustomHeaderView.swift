@@ -40,8 +40,8 @@ class CustomHeaderView: UIView {
         }
         
         lazy var backButton = UIButton()
-        backButton.setImage(UIImage(named: "Left"), for: .normal)
-        backButton.tintColor = .darkGray
+        backButton.setImage(UIImage(named: "left"), for: .normal)
+        backButton.tintColor = .primaryGray
         addSubview(backButton)
         backButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(80)

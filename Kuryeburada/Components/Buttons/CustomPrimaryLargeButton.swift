@@ -10,6 +10,9 @@ import SnapKit
 
 class CustomPrimaryLargeButton: UIButton {
     
+     var destinationViewController = UIViewController()
+     var currentViewController = UIViewController()
+    
     var buttonTitle = UILabel()
 
     override init(frame: CGRect) {
@@ -27,7 +30,18 @@ class CustomPrimaryLargeButton: UIButton {
         configureUI()
     }
     
+    init(title: String, currentVC: UIViewController, destinationVC : UIViewController) {
+        super.init(frame: .zero)
+        configureUI()
+        self.buttonTitle.text = title
+        destinationViewController = destinationVC
+        currentViewController = currentVC
+    }
+    
     private func configureUI() {
+        
+        addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
 
         addSubview(buttonTitle)
         buttonTitle.numberOfLines = 2
@@ -35,8 +49,8 @@ class CustomPrimaryLargeButton: UIButton {
         buttonTitle.font = Font.header3()
         buttonTitle.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            
         }
+        
         
         snp.makeConstraints { make in
             make.height.equalTo(56)
@@ -45,6 +59,10 @@ class CustomPrimaryLargeButton: UIButton {
         layer.cornerRadius = 10
        
         
+    }
+    
+    @objc func buttonTapped(){
+        Presentation.presentVC(currentVC: currentViewController, destinationVC: destinationViewController, toDirection: .right)
     }
     
 

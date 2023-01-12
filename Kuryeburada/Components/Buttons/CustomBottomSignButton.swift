@@ -1,18 +1,19 @@
 //
-//  CustomPrimaryLittleButton.swift
-//  Geyim Burada
+//  CustomBottomSignButton.swift
+//  Kuryeburada
 //
-//  Created by Dilara Elçioğlu on 9.01.2023.
+//  Created by Dilara Elçioğlu on 10.01.2023.
 //
 
 import UIKit
 
-var destinationViewController = UIViewController()
-var currentViewController = UIViewController()
-
-class CustomPrimarySmallButton: UIButton {
-
+class CustomBottomSignButton: UIButton {
+    
+    var destinationViewController = UIViewController()
+    var currentViewController = UIViewController()
+    
     var buttonTitle = UILabel()
+    var buttonTitle2 = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,10 +30,11 @@ class CustomPrimarySmallButton: UIButton {
         configureUI()
     }
     
-    init(title: String, currentVC: UIViewController, destinationVC : UIViewController) {
+    init(buttonText: String, labelText: String, currentVC: UIViewController, destinationVC : UIViewController) {
         super.init(frame: .zero)
         configureUI()
-        self.buttonTitle.text = title
+        self.buttonTitle2.text = buttonText
+        buttonTitle.text = labelText
         destinationViewController = destinationVC
         currentViewController = currentVC
     }
@@ -40,27 +42,28 @@ class CustomPrimarySmallButton: UIButton {
     private func configureUI() {
         
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-
-        addSubview(buttonTitle)
-        buttonTitle.numberOfLines = 2
-        buttonTitle.textColor = .white
-        buttonTitle.font = Font.header3()
-        buttonTitle.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            
+        snp.makeConstraints { make in
+            make.height.equalTo(20)
+            make.width.equalTo(240)
         }
         
-        snp.makeConstraints { make in
-            make.height.equalTo(56)
-            make.width.equalTo(100)
-
+        addSubview(buttonTitle)
+        buttonTitle.numberOfLines = 2
+        buttonTitle.textColor = .primaryGray
+        buttonTitle.font = Font.labelFont()
+        buttonTitle.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
         }
-        backgroundColor = .primaryGreen
-        layer.cornerRadius = 10
+        
+        addSubview(buttonTitle2)
+        buttonTitle2.textColor = .primaryGreen
+        buttonTitle2.font = Font.labelFont()
+        buttonTitle2.snp.makeConstraints { make in
+            make.leading.equalTo(buttonTitle.snp.trailing).offset(4)
+        }
         
     }
     @objc func buttonTapped(){
         Presentation.presentVC(currentVC: currentViewController, destinationVC: destinationViewController, toDirection: .right)
     }
-
 }

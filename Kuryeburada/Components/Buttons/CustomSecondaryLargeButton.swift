@@ -9,7 +9,10 @@ import UIKit
 
 class CustomSecondaryLargeButton: UIButton {
 
-    var buttonSTitle = UILabel()
+    lazy var destinationViewController = UIViewController()
+    lazy var currentViewController = UIViewController()
+    
+    var buttonTitle = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,17 +25,28 @@ class CustomSecondaryLargeButton: UIButton {
     
     init(title: String) {
         super.init(frame: .zero)
-        self.buttonSTitle.text = title
+        self.buttonTitle.text = title
         configureUI()
     }
     
+    init(title: String, currentVC: UIViewController, destinationVC : UIViewController) {
+        super.init(frame: .zero)
+        configureUI()
+        self.buttonTitle.text = title
+        destinationViewController = destinationVC
+        currentViewController = currentVC
+    }
+    
     private func configureUI() {
+        
+        addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
-        addSubview(buttonSTitle)
-        buttonSTitle.numberOfLines = 2
-        buttonSTitle.textColor = .primaryGray
-        buttonSTitle.font = Font.header3()
-        buttonSTitle.snp.makeConstraints { make in
+
+        addSubview(buttonTitle)
+        buttonTitle.numberOfLines = 2
+        buttonTitle.textColor = .primaryGray
+        buttonTitle.font = Font.header3()
+        buttonTitle.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
         
@@ -45,6 +59,8 @@ class CustomSecondaryLargeButton: UIButton {
         backgroundColor = .white
         
     }
-    
+    @objc func buttonTapped(){
+        Presentation.presentVC(currentVC: currentViewController, destinationVC: destinationViewController, toDirection: .right)
+    }
 
 }

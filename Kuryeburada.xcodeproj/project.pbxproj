@@ -38,7 +38,18 @@
 		C6BFB4D4296C45200059FFAE /* CustomPrimaryLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BFB4D0296C45200059FFAE /* CustomPrimaryLargeButton.swift */; };
 		C6BFB4D5296C45200059FFAE /* CustomSecondarySmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BFB4D1296C45200059FFAE /* CustomSecondarySmallButton.swift */; };
 		C6BFB4D6296C45200059FFAE /* CustomSecondaryLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BFB4D2296C45200059FFAE /* CustomSecondaryLargeButton.swift */; };
-		C6C3C827296CA4EA000AE4CE /* Intro1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C826296CA4EA000AE4CE /* Intro1VC.swift */; };
+		C6C3C827296CA4EA000AE4CE /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C826296CA4EA000AE4CE /* IntroVC.swift */; };
+		C6C3C829296CA5D5000AE4CE /* CustomIntroLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C828296CA5D5000AE4CE /* CustomIntroLabel.swift */; };
+		C6C3C82B296D47A9000AE4CE /* Intro2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C82A296D47A9000AE4CE /* Intro2VC.swift */; };
+		C6C3C82D296D47BC000AE4CE /* Intro3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C82C296D47BC000AE4CE /* Intro3VC.swift */; };
+		C6C3C82F296D4A59000AE4CE /* Intro1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C82E296D4A59000AE4CE /* Intro1VC.swift */; };
+		C6C3C831296D647D000AE4CE /* CustomIntroTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C830296D647D000AE4CE /* CustomIntroTextView.swift */; };
+		C6C3C833296D8537000AE4CE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C832296D8537000AE4CE /* SignInVC.swift */; };
+		C6C3C835296D8FC7000AE4CE /* CustomBottomSignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C834296D8FC7000AE4CE /* CustomBottomSignButton.swift */; };
+		C6C3C839296D9871000AE4CE /* CustomConnectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C838296D9871000AE4CE /* CustomConnectionButton.swift */; };
+		C6C3C83B296DA87A000AE4CE /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C83A296DA87A000AE4CE /* CreateAccountVC.swift */; };
+		C6C3C83D296FF453000AE4CE /* LogInAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C83C296FF451000AE4CE /* LogInAccountVC.swift */; };
+		C6C3C83F296FFD77000AE4CE /* FillYourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C83E296FFD77000AE4CE /* FillYourProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,7 +83,18 @@
 		C6BFB4D0296C45200059FFAE /* CustomPrimaryLargeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrimaryLargeButton.swift; sourceTree = "<group>"; };
 		C6BFB4D1296C45200059FFAE /* CustomSecondarySmallButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSecondarySmallButton.swift; sourceTree = "<group>"; };
 		C6BFB4D2296C45200059FFAE /* CustomSecondaryLargeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSecondaryLargeButton.swift; sourceTree = "<group>"; };
-		C6C3C826296CA4EA000AE4CE /* Intro1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1VC.swift; sourceTree = "<group>"; };
+		C6C3C826296CA4EA000AE4CE /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
+		C6C3C828296CA5D5000AE4CE /* CustomIntroLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIntroLabel.swift; sourceTree = "<group>"; };
+		C6C3C82A296D47A9000AE4CE /* Intro2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro2VC.swift; sourceTree = "<group>"; };
+		C6C3C82C296D47BC000AE4CE /* Intro3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro3VC.swift; sourceTree = "<group>"; };
+		C6C3C82E296D4A59000AE4CE /* Intro1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1VC.swift; sourceTree = "<group>"; };
+		C6C3C830296D647D000AE4CE /* CustomIntroTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIntroTextView.swift; sourceTree = "<group>"; };
+		C6C3C832296D8537000AE4CE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		C6C3C834296D8FC7000AE4CE /* CustomBottomSignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSignButton.swift; sourceTree = "<group>"; };
+		C6C3C838296D9871000AE4CE /* CustomConnectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConnectionButton.swift; sourceTree = "<group>"; };
+		C6C3C83A296DA87A000AE4CE /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		C6C3C83C296FF451000AE4CE /* LogInAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAccountVC.swift; sourceTree = "<group>"; };
+		C6C3C83E296FFD77000AE4CE /* FillYourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillYourProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +178,8 @@
 				C6BFB4CF296C451F0059FFAE /* CustomPrimarySmallButton.swift */,
 				C6BFB4D2296C45200059FFAE /* CustomSecondaryLargeButton.swift */,
 				C6BFB4D1296C45200059FFAE /* CustomSecondarySmallButton.swift */,
+				C6C3C834296D8FC7000AE4CE /* CustomBottomSignButton.swift */,
+				C6C3C838296D9871000AE4CE /* CustomConnectionButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -168,6 +192,7 @@
 				C6BFB4C9296C45020059FFAE /* CustomSecondHeadLabel.swift */,
 				C6BFB4C8296C45020059FFAE /* CustomNormalHeadLabel.swift */,
 				C6BFB4C7296C45010059FFAE /* CustomNormalLabel.swift */,
+				C6C3C828296CA5D5000AE4CE /* CustomIntroLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -194,6 +219,7 @@
 				C6BFB4C1296C44E40059FFAE /* CustomTextField.swift */,
 				C6BFB4BF296C44E30059FFAE /* CustomEditableTextView.swift */,
 				C6BFB4C0296C44E40059FFAE /* CustomNonEditTextView.swift */,
+				C6C3C830296D647D000AE4CE /* CustomIntroTextView.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -212,7 +238,14 @@
 			children = (
 				C6BFB4A4296C41B70059FFAE /* OpeningVC.swift */,
 				C60E7A3E296C5DF0005754F9 /* WelcomeVC.swift */,
-				C6C3C826296CA4EA000AE4CE /* Intro1VC.swift */,
+				C6C3C826296CA4EA000AE4CE /* IntroVC.swift */,
+				C6C3C82E296D4A59000AE4CE /* Intro1VC.swift */,
+				C6C3C82A296D47A9000AE4CE /* Intro2VC.swift */,
+				C6C3C82C296D47BC000AE4CE /* Intro3VC.swift */,
+				C6C3C832296D8537000AE4CE /* SignInVC.swift */,
+				C6C3C83A296DA87A000AE4CE /* CreateAccountVC.swift */,
+				C6C3C83C296FF451000AE4CE /* LogInAccountVC.swift */,
+				C6C3C83E296FFD77000AE4CE /* FillYourProfileVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,14 +350,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BFB4A5296C41B70059FFAE /* OpeningVC.swift in Sources */,
+				C6C3C82D296D47BC000AE4CE /* Intro3VC.swift in Sources */,
+				C6C3C839296D9871000AE4CE /* CustomConnectionButton.swift in Sources */,
+				C6C3C833296D8537000AE4CE /* SignInVC.swift in Sources */,
 				C6BFB4D3296C45200059FFAE /* CustomPrimarySmallButton.swift in Sources */,
 				C6BFB4D6296C45200059FFAE /* CustomSecondaryLargeButton.swift in Sources */,
+				C6C3C82B296D47A9000AE4CE /* Intro2VC.swift in Sources */,
 				C6BFB4CC296C45020059FFAE /* CustomNormalLabel.swift in Sources */,
+				C6C3C83B296DA87A000AE4CE /* CreateAccountVC.swift in Sources */,
+				C6C3C82F296D4A59000AE4CE /* Intro1VC.swift in Sources */,
 				C6BFB4D5296C45200059FFAE /* CustomSecondarySmallButton.swift in Sources */,
 				C6BFB4C3296C44E40059FFAE /* CustomNonEditTextView.swift in Sources */,
+				C6C3C831296D647D000AE4CE /* CustomIntroTextView.swift in Sources */,
 				C6BFB4BE296C443E0059FFAE /* CustomSearchBar.swift in Sources */,
+				C6C3C835296D8FC7000AE4CE /* CustomBottomSignButton.swift in Sources */,
+				C6C3C83D296FF453000AE4CE /* LogInAccountVC.swift in Sources */,
 				C6BFB4A1296C41B70059FFAE /* AppDelegate.swift in Sources */,
 				C60E7A3F296C5DF0005754F9 /* WelcomeVC.swift in Sources */,
+				C6C3C83F296FFD77000AE4CE /* FillYourProfileVC.swift in Sources */,
 				C6BFB4C2296C44E40059FFAE /* CustomEditableTextView.swift in Sources */,
 				C6BFB4CA296C45020059FFAE /* CustomFirstHeadLabel.swift in Sources */,
 				C6BFB4B9296C42DE0059FFAE /* CustomColor.swift in Sources */,
@@ -336,7 +379,8 @@
 				C60E7A3D296C5B40005754F9 /* SceneDelegate.swift in Sources */,
 				C6BFB4CE296C45020059FFAE /* CustomSecondHeadLabel.swift in Sources */,
 				C6BFB4D4296C45200059FFAE /* CustomPrimaryLargeButton.swift in Sources */,
-				C6C3C827296CA4EA000AE4CE /* Intro1VC.swift in Sources */,
+				C6C3C829296CA5D5000AE4CE /* CustomIntroLabel.swift in Sources */,
+				C6C3C827296CA4EA000AE4CE /* IntroVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

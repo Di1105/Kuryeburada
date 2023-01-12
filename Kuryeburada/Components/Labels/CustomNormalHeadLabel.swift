@@ -31,7 +31,7 @@ class CustomNormalHeadLabel: UILabel {
             make.height.equalTo(48)
         }
         backgroundColor = .white
-        font = Font.custom(size: 14, fontWeight: .bold) //Poppins-bold size 14
+        font = Font.header4() //Poppins-bold size 14
         textColor = .primaryGray
         
         

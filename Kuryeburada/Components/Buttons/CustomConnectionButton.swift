@@ -1,17 +1,24 @@
 //
-//  CustomSecondaryLittleButton.swift
-//  Geyim Burada
+//  CustomConnectionButton.swift
+//  Kuryeburada
 //
-//  Created by Dilara Elçioğlu on 9.01.2023.
+//  Created by Dilara Elçioğlu on 10.01.2023.
 //
 
 import UIKit
 
-class CustomSecondarySmallButton: UIButton {
+class CustomConnectionButton: UIButton {
+    
+    enum Connection {
+        case facebook
+        case google
+        case appleID
+    }
+    
 
     var destinationViewController = UIViewController()
     var currentViewController = UIViewController()
-    
+    var buttonImage = UIImageView()
     var buttonTitle = UILabel()
 
     override init(frame: CGRect) {
@@ -29,12 +36,21 @@ class CustomSecondarySmallButton: UIButton {
         configureUI()
     }
     
-    init(title: String, currentVC: UIViewController, destinationVC : UIViewController) {
+    init(connectionLogo: String, currentVC: UIViewController, destinationVC : UIViewController) {
         super.init(frame: .zero)
         configureUI()
-        self.buttonTitle.text = title
         destinationViewController = destinationVC
         currentViewController = currentVC
+        buttonImage.image = UIImage(named: connectionLogo)
+    }
+    
+    init(connection: String, currentVC: UIViewController, destinationVC : UIViewController) {
+        super.init(frame: .zero)
+        configureUI()
+        destinationViewController = destinationVC
+        currentViewController = currentVC
+        buttonImage.image = UIImage(named: connection)
+        buttonTitle.text = "Continue with \(connection)"
     }
     
     private func configureUI() {
@@ -48,21 +64,31 @@ class CustomSecondarySmallButton: UIButton {
         backgroundColor = .white
         buttonTitle.numberOfLines = 2
         buttonTitle.textColor = .primaryGray
-        buttonTitle.font = Font.header3()
+        buttonTitle.font = Font.labelFont()
         buttonTitle.snp.makeConstraints { make in
             make.center.equalToSuperview()
             
         }
+        
+        addSubview(buttonImage)
+        layer.cornerRadius = 10
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.primaryGray?.cgColor
+        buttonImage.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalTo(buttonTitle.snp.leading).offset(-16)
+        }
+        
         
         snp.makeConstraints { make in
             make.height.equalTo(56)
             make.width.equalTo(100)
         }
         
-        
     }
     @objc func buttonTapped(){
         Presentation.presentVC(currentVC: currentViewController, destinationVC: destinationViewController, toDirection: .right)
     }
-
+    
 }
+
