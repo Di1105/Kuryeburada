@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CustomSecondarySmallButton: UIButton {
 
@@ -39,6 +40,10 @@ class CustomSecondarySmallButton: UIButton {
     
     private func configureUI() {
         
+        snp.makeConstraints { make in
+            make.height.equalTo(56)
+            make.width.equalTo(100)
+        }
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
         addSubview(buttonTitle)
@@ -52,11 +57,6 @@ class CustomSecondarySmallButton: UIButton {
         buttonTitle.snp.makeConstraints { make in
             make.center.equalToSuperview()
             
-        }
-        
-        snp.makeConstraints { make in
-            make.height.equalTo(56)
-            make.width.equalTo(100)
         }
         
         

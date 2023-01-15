@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 var destinationViewController = UIViewController()
 var currentViewController = UIViewController()
@@ -39,6 +40,13 @@ class CustomPrimarySmallButton: UIButton {
     
     private func configureUI() {
         
+        snp.makeConstraints { make in
+            make.height.equalTo(56)
+            make.width.equalTo(100)
+
+        }
+        backgroundColor = .primaryGreen
+        layer.cornerRadius = 10
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
         addSubview(buttonTitle)
@@ -49,14 +57,6 @@ class CustomPrimarySmallButton: UIButton {
             make.center.equalToSuperview()
             
         }
-        
-        snp.makeConstraints { make in
-            make.height.equalTo(56)
-            make.width.equalTo(100)
-
-        }
-        backgroundColor = .primaryGreen
-        layer.cornerRadius = 10
         
     }
     @objc func buttonTapped(){

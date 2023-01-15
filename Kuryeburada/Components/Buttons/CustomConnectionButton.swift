@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 
 class CustomConnectionButton: UIButton {
     
     enum Connection {
-        case facebook
-        case google
-        case appleID
+        case Facebook
+        case Google
+        case AppleID
     }
     
 
@@ -36,27 +37,27 @@ class CustomConnectionButton: UIButton {
         configureUI()
     }
     
-    init(connectionLogo: String, currentVC: UIViewController, destinationVC : UIViewController) {
-        super.init(frame: .zero)
-        configureUI()
-        destinationViewController = destinationVC
-        currentViewController = currentVC
-        buttonImage.image = UIImage(named: connectionLogo)
-    }
     
-    init(connection: String, currentVC: UIViewController, destinationVC : UIViewController) {
+    init(connectionLogo: Connection, currentVC: UIViewController, destinationVC : UIViewController) {
         super.init(frame: .zero)
         configureUI()
         destinationViewController = destinationVC
         currentViewController = currentVC
-        buttonImage.image = UIImage(named: connection)
-        buttonTitle.text = "Continue with \(connection)"
+        buttonImage.image = UIImage(named: "\(connectionLogo)")
+        buttonTitle.text = "Continue with \(connectionLogo)"
     }
     
     private func configureUI() {
         
+        backgroundColor = .white
+        layer.cornerRadius = 20
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.primaryGray?.cgColor
+        snp.makeConstraints { make in
+            make.height.equalTo(56)
+        }
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-
+        
         addSubview(buttonTitle)
         layer.cornerRadius = 10
         layer.borderWidth = 1
@@ -67,7 +68,6 @@ class CustomConnectionButton: UIButton {
         buttonTitle.font = Font.labelFont()
         buttonTitle.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            
         }
         
         addSubview(buttonImage)
@@ -77,12 +77,6 @@ class CustomConnectionButton: UIButton {
         buttonImage.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.trailing.equalTo(buttonTitle.snp.leading).offset(-16)
-        }
-        
-        
-        snp.makeConstraints { make in
-            make.height.equalTo(56)
-            make.width.equalTo(100)
         }
         
     }

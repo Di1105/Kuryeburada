@@ -1,25 +1,27 @@
 //
-//  CongratsPopVC.swift
+//  PaymentProfileVC.swift
 //  Kuryeburada
 //
-//  Created by Dilara Elçioğlu on 12.01.2023.
+//  Created by Dilara Elçioğlu on 13.01.2023.
 //
 
 import UIKit
-import SnapKit
 import Lottie
 
 class CongratsPopVC: UIViewController {
     
     private var animationView: LottieAnimationView?
 
+    let button = UIButton()
+    let tabBar = UITabBarController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        setupUI()
+        setUpUI()
+        
     }
     
-    func setupUI(){
+    func setUpUI(){
         
         lazy var congratsView = UIView()
         view.addSubview(congratsView)
@@ -81,9 +83,38 @@ class CongratsPopVC: UIViewController {
         
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(goToFirstPage), userInfo: nil, repeats: false)
     }
-  //HomePage'e gidecek---------------------------------------
+    
     @objc func goToFirstPage(){
-        Presentation.presentVC(currentVC: self, destinationVC: OpeningVC(), toDirection: .right)
+        let vc1 = UINavigationController(rootViewController: HomeVC())
+        let vc2 = UINavigationController(rootViewController:MyOrderVC())
+        let vc3 = UINavigationController(rootViewController:InboxVC())
+        let vc4 = UINavigationController(rootViewController:ProfileVC())
+        
+        vc1.title = "Home"
+        vc2.title = "My Order"
+        vc3.title = "Inbox"
+        vc4.title = "Profile"
+        
+        tabBar.setViewControllers([vc1, vc2, vc3, vc4], animated: false  )
+        tabBar.tabBar.backgroundColor = .white
+
+        guard let items = tabBar.tabBar.items else {
+            return
+        }
+        let image = ["house","heart","pencil","person"]
+        //Title subtitle arka plan renkleri değişecek. subtitle itemların rengi değişecek
+        
+        for x in 0..<items.count {
+            items[x].badgeValue = "1"
+            items[x].image?.withTintColor(.red)
+            items[x].image = UIImage(systemName : image[x])
+            
+        }
+        
+        tabBar.modalPresentationStyle = .fullScreen
+        present(tabBar, animated: true)
+ 
     }
+
 }
 

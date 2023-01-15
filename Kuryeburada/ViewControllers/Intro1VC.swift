@@ -26,7 +26,6 @@ class Intro1VC: UIViewController {
             make.height.equalTo(view.frame.size.height/2+50)
         }
         
-       
         lazy var introTextView = CustomIntroTextView(frame: .zero, text: "The best app for shipping & delivery in this century")
         view.addSubview(introTextView)
         introTextView.snp.makeConstraints { make in
@@ -34,8 +33,6 @@ class Intro1VC: UIViewController {
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().offset(-32)
         }
-       
-        
         
         lazy var introButton = CustomPrimaryLargeButton(title: "Next", currentVC: self, destinationVC: Intro2VC())
         view.addSubview(introButton)
@@ -44,10 +41,5 @@ class Intro1VC: UIViewController {
             make.width.equalToSuperview().offset(-32)
             make.centerX.equalToSuperview()
         }
-        
-       
-        
     }
-
-    
 }

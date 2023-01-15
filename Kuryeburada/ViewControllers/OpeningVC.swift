@@ -24,7 +24,8 @@ class OpeningVC: UIViewController {
     
     func setupUI(){
         
-        lazy var logoLabel = UILabel()
+        lazy var logoLabel = UIImageView()
+        logoLabel.image = UIImage(named: "logo")
         view.addSubview(logoLabel)
         logoLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()

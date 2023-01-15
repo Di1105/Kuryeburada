@@ -30,14 +30,14 @@ class PinMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     func setupUI(){
         
-        lazy var headerView = CustomHeaderView(text: "Pin your Address Location", currentVC: self, destinationVC: FillYourProfileVC())
+        lazy var headerView = CustomHeaderView(leftButtonImage: "left", leftOneText: "Pin your Address Location", rightButtonIcon: "", currentVC: self, destinationVC: FillYourProfileVC())
         view.addSubview(headerView)
         headerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.width.equalToSuperview()
         }
         
-        lazy var continueButton = CustomPrimaryLargeButton(title: "Continue", currentVC: self, destinationVC: CreatePinVC())
+        lazy var continueButton = CustomPrimaryLargeButton(title: "Continue", currentVC: self, destinationVC: CreateNewPinVC())
         view.addSubview(continueButton)
         continueButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CustomHeaderView: UIView {
+class CustomHeaderViewSil: UIView {
     
     lazy var accountHeader = UILabel()
     lazy var destinationViewController = UIViewController()
@@ -38,15 +38,16 @@ class CustomHeaderView: UIView {
         snp.makeConstraints { make in
             make.height.equalTo(100)
         }
+        backgroundColor = .white
         
         lazy var backButton = UIButton()
         backButton.setImage(UIImage(named: "left"), for: .normal)
         backButton.tintColor = .primaryGray
         addSubview(backButton)
         backButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
+            make.bottom.equalToSuperview().offset(-8)
             make.leading.equalToSuperview().offset(16)
-            make.width.height.equalTo(32)
+            make.width.height.equalTo(40)
         }
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         
@@ -54,17 +55,15 @@ class CustomHeaderView: UIView {
         accountHeader.textColor = .primaryDarkBlue
         addSubview(accountHeader)
         accountHeader.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
             make.height.equalTo(24)
             make.centerX.equalToSuperview()
+            make.centerY.equalTo(backButton)
         }
-        
-       
-        
+                
     }
     
     @objc func backButtonTapped(){
-        Presentation.presentVC(currentVC: currentViewController, destinationVC: destinationViewController, toDirection: .right)
+        Presentation.presentVC(currentVC: currentViewController, destinationVC: destinationViewController, toDirection: .left)
 
     }
     

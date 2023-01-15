@@ -19,7 +19,8 @@ class FillYourProfileVC: UIViewController,UIImagePickerControllerDelegate & UINa
     }
     
     func setupUI(){
-        lazy var headerView = CustomHeaderView(text: "Fill Your Profile", currentVC: self, destinationVC: OpeningVC())
+        
+        lazy var headerView = CustomHeaderView(leftButtonImage: "left", middleHeaderText: "Fill Your Profile", currentVC: self, destinationVC: CreateAccountVC())
         view.addSubview(headerView)
         headerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -116,9 +117,6 @@ class FillYourProfileVC: UIViewController,UIImagePickerControllerDelegate & UINa
             make.width.equalToSuperview().offset(-32)
             make.centerX.equalToSuperview()
         }
-        
-        
-        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -127,18 +125,6 @@ class FillYourProfileVC: UIViewController,UIImagePickerControllerDelegate & UINa
         picker.dismiss(animated: true, completion: nil)
     }
     
-    @objc func buttonTapped(){
-        Presentation.presentVC(currentVC: self, destinationVC: OpeningVC(), toDirection: .right)
-    }
-    
-    @objc func clickButtonDidSelected(_ sender: UIButton){
-        sender.backgroundColor = sender.backgroundColor == UIColor.white ? .primaryGreen : UIColor.white
-
-    }
-    
-    @objc func forgetButtonTapped(){
-        Presentation.presentVC(currentVC: self, destinationVC: OpeningVC(), toDirection: .right)
-    }
     
     @objc func selectPhoto(){
         let picker = UIImagePickerController()

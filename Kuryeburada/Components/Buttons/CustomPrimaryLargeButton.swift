@@ -34,14 +34,19 @@ class CustomPrimaryLargeButton: UIButton {
         super.init(frame: .zero)
         configureUI()
         self.buttonTitle.text = title
-        destinationViewController = destinationVC
-        currentViewController = currentVC
+        self.destinationViewController = destinationVC
+        self.currentViewController = currentVC
     }
     
     private func configureUI() {
         
+        backgroundColor = .primaryGreen
+        layer.cornerRadius = 10
+        snp.makeConstraints { make in
+            make.height.equalTo(56)
+        }
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        
+
 
         addSubview(buttonTitle)
         buttonTitle.numberOfLines = 2
@@ -50,13 +55,6 @@ class CustomPrimaryLargeButton: UIButton {
         buttonTitle.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
-        
-        
-        snp.makeConstraints { make in
-            make.height.equalTo(56)
-        }
-        backgroundColor = .primaryGreen
-        layer.cornerRadius = 10
        
         
     }

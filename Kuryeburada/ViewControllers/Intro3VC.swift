@@ -24,7 +24,6 @@ class Intro3VC: UIViewController {
         introImageView.snp.makeConstraints { make in
             make.top.width.equalToSuperview()
             make.height.equalTo(view.frame.size.height/2+50)
-
         }
         
         lazy var introTextView = CustomIntroTextView(frame: .zero, text: "Welcome to \n Kurye Burada and enjoy our service")
@@ -36,16 +35,12 @@ class Intro3VC: UIViewController {
         }
        
         //destinationVC değişecek--------------------------------------------
-        lazy var introButton = CustomPrimaryLargeButton(title: "Next", currentVC: self, destinationVC: OpeningVC())
+        lazy var introButton = CustomPrimaryLargeButton(title: "Next", currentVC: self, destinationVC: SignInVC())
         view.addSubview(introButton)
         introButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().offset(-32)
             make.width.equalToSuperview().offset(-32)
             make.centerX.equalToSuperview()
         }
-        
-        
     }
-
-
 }

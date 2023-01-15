@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CustomSecondaryLargeButton: UIButton {
 
@@ -40,7 +41,13 @@ class CustomSecondaryLargeButton: UIButton {
     private func configureUI() {
         
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-
+        snp.makeConstraints { make in
+            make.height.equalTo(56)
+        }
+        layer.cornerRadius = 10
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.primaryGray?.cgColor
+        backgroundColor = .white
 
         addSubview(buttonTitle)
         buttonTitle.numberOfLines = 2
@@ -50,13 +57,6 @@ class CustomSecondaryLargeButton: UIButton {
             make.center.equalToSuperview()
         }
         
-        snp.makeConstraints { make in
-            make.height.equalTo(56)
-        }
-        layer.cornerRadius = 10
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.primaryGray?.cgColor
-        backgroundColor = .white
         
     }
     @objc func buttonTapped(){

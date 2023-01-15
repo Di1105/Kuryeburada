@@ -18,13 +18,14 @@ class SignInVC: UIViewController {
     }
     
     func setupUI(){
-        lazy var headerView = CustomHeaderView(text: "", currentVC: self, destinationVC: OpeningVC())
+
+        lazy var headerView = CustomHeaderView(leftButtonImage: "left", middleHeaderText: "", currentVC: self, destinationVC: WelcomeVC())
         view.addSubview(headerView)
         headerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.width.equalToSuperview()
         }
-      
+        
         lazy var logImage = UIImageView()
         view.addSubview(logImage)
         logImage.image = UIImage(named: "logIn")
@@ -42,7 +43,7 @@ class SignInVC: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        lazy var connectFacebook = CustomConnectionButton(connection: "Facebook", currentVC: self, destinationVC: OpeningVC())
+        lazy var connectFacebook = CustomConnectionButton(connectionLogo: .Facebook, currentVC: self, destinationVC: SignInVC())
         view.addSubview(connectFacebook)
         connectFacebook.snp.makeConstraints { make in
             make.top.equalTo(logInLabel.snp.bottom).offset(16)
@@ -50,7 +51,7 @@ class SignInVC: UIViewController {
             make.width.equalToSuperview().offset(-32)
         }
         
-        lazy var connectGoogle = CustomConnectionButton(connection: "Google", currentVC: self, destinationVC: OpeningVC())
+        lazy var connectGoogle = CustomConnectionButton(connectionLogo: .Google, currentVC: self, destinationVC: SignInVC())
         view.addSubview(connectGoogle)
         connectGoogle.snp.makeConstraints { make in
             make.top.equalTo(connectFacebook.snp.bottom).offset(8)
@@ -58,7 +59,7 @@ class SignInVC: UIViewController {
             make.width.equalToSuperview().offset(-32)
         }
         
-        lazy var connectApple = CustomConnectionButton(connection: "Facebook", currentVC: self, destinationVC: OpeningVC())
+        lazy var connectApple = CustomConnectionButton(connectionLogo: .Facebook, currentVC: self, destinationVC: SignInVC())
         view.addSubview(connectApple)
         connectApple.snp.makeConstraints { make in
             make.top.equalTo(connectGoogle.snp.bottom).offset(8)
@@ -66,14 +67,14 @@ class SignInVC: UIViewController {
             make.width.equalToSuperview().offset(-32)
         }
         
-        lazy var signUpSubButton = CustomBottomSignButton(buttonText: "Don't have an account?", labelText: "Sign Up", currentVC: self, destinationVC: CreateAccountVC())
+        lazy var signUpSubButton = CustomBottomSignButton(labelText: "Don't have an account?", buttonText: "Sign Up" , currentVC: self, destinationVC: CreateAccountVC())
         view.addSubview(signUpSubButton)
         signUpSubButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().offset(-24)
             make.centerX.equalToSuperview()
         }
         
-        lazy var signInButton = CustomPrimaryLargeButton(title: "Sign in with password", currentVC: self, destinationVC: OpeningVC())
+        lazy var signInButton = CustomPrimaryLargeButton(title: "Sign in with password", currentVC: self, destinationVC: LogInAccountVC())
         view.addSubview(signInButton)
         signInButton.snp.makeConstraints { make in
             make.bottom.equalTo(signUpSubButton.snp.top).offset(-16)

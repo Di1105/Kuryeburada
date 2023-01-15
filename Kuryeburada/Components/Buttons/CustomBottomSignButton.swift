@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CustomBottomSignButton: UIButton {
     
@@ -30,7 +31,7 @@ class CustomBottomSignButton: UIButton {
         configureUI()
     }
     
-    init(buttonText: String, labelText: String, currentVC: UIViewController, destinationVC : UIViewController) {
+    init(labelText: String, buttonText: String,  currentVC: UIViewController, destinationVC : UIViewController) {
         super.init(frame: .zero)
         configureUI()
         self.buttonTitle2.text = buttonText

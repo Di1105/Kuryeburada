@@ -19,14 +19,12 @@ class SetFingerPrintVC: UIViewController {
     
     func setupUI(){
         
-        lazy var headerView = CustomHeaderView(text: "Set Your Fingerprint", currentVC: self, destinationVC: CreatePinVC())
+        lazy var headerView = CustomHeaderView(leftButtonImage: "left", leftOneText: "Set Your Fingerprint", rightButtonIcon: "person", currentVC: self, destinationVC: CreateNewPinVC())
         view.addSubview(headerView)
         headerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.width.equalToSuperview()
         }
-        
-
         
         lazy var continueButton = CustomPrimarySmallButton(title: "Continue")
         view.addSubview(continueButton)
@@ -34,7 +32,7 @@ class SetFingerPrintVC: UIViewController {
             make.trailing.equalToSuperview().offset(-32)
             make.bottom.equalToSuperview().offset(-32)
            }
-        continueButton.addTarget(self, action: #selector(goto), for: .touchUpInside)
+        continueButton.addTarget(self, action: #selector(gotoCongrats), for: .touchUpInside)
         
         lazy var skipButton = CustomSecondarySmallButton(title: "Skip", currentVC: self, destinationVC: SetFingerPrintVC())
         view.addSubview(skipButton)
@@ -84,12 +82,11 @@ class SetFingerPrintVC: UIViewController {
             make.centerX.equalToSuperview()
         }
         infoLabelSub.textAlignment = .center
-        
-        
+    
         
     }
     
-    @objc func goto(){
+    @objc func gotoCongrats(){
         Presentation.presentAsPageSheet(currentVC: self, destinationVC: CongratsPopVC())
     }
 }

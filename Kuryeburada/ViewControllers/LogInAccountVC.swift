@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class LogInAccountVC: UIViewController {
     
@@ -13,11 +14,12 @@ class LogInAccountVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
-
     }
     
     func setupUI(){
-        lazy var headerView = CustomHeaderView(text: "", currentVC: self, destinationVC: OpeningVC())
+        
+        
+        lazy var headerView = CustomHeaderView(leftButtonImage: "left", middleHeaderText: "", currentVC: self, destinationVC: CreateAccountVC())
         view.addSubview(headerView)
         headerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -29,8 +31,6 @@ class LogInAccountVC: UIViewController {
         logInLabel.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom).offset(8)
             make.centerX.equalToSuperview()
-            // make.width.equalTo(view.frame.size.width/2)
-            
         }
         
         lazy var emailText = CustomTextField(placeholder: "Email", leftImgName: "email")
@@ -49,81 +49,43 @@ class LogInAccountVC: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        lazy var remmeberLabel = UILabel()
-        view.addSubview(remmeberLabel)
-        remmeberLabel.backgroundColor = .white
-        remmeberLabel.text = "Remember me"
-        remmeberLabel.font = Font.labelFont()
-        remmeberLabel.textColor = .primaryDarkBlue
-        remmeberLabel.snp.makeConstraints { make in
-            make.top.equalTo(passwordText.snp.bottom).offset(20)
+        lazy var remmeberButton = CustomRememberButton()
+        view.addSubview(remmeberButton)
+        remmeberButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordText.snp.bottom).offset(16)
             make.centerX.equalToSuperview().offset(16)
-            make.height.equalTo(20)
         }
-        
-        lazy var rememberButton = UIButton()
-        view.addSubview(rememberButton)
-        rememberButton.layer.cornerRadius = 5
-        rememberButton.backgroundColor = .white
-        rememberButton.layer.borderWidth = 2
-        rememberButton.layer.borderColor = UIColor.primaryGreen?.cgColor
-        rememberButton.snp.makeConstraints { make in
-            make.centerY.equalTo(remmeberLabel)
-            make.width.height.equalTo(20)
-            make.trailing.equalTo(remmeberLabel.snp.leading).offset(-8)
-        }
-        rememberButton.addTarget(self, action: #selector(clickButtonDidSelected), for: .touchUpInside)
-        
+                
 //Bottom Tools--------------------------------
         
-        lazy var signUpSubButton = CustomBottomSignButton(buttonText: "Sign Up", labelText: "Already have an account?", currentVC: self, destinationVC: OpeningVC())
+        lazy var signUpSubButton = CustomBottomSignButton(labelText: "Already have an account?", buttonText: "Sign Up", currentVC: self, destinationVC: CreateAccountVC())
         view.addSubview(signUpSubButton)
         signUpSubButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().offset(-24)
             make.centerX.equalToSuperview()
         }
         
-        lazy var connectGoogle = UIButton()
+        lazy var connectGoogle = CustomConnectionSmallButton(connectionLogo: .Google, currentVC: self, destinationVC: LogInAccountVC())
         view.addSubview(connectGoogle)
-        connectGoogle.setImage(UIImage(named: "Google"), for: .normal)
-        connectGoogle.layer.cornerRadius = 20
-        connectGoogle.layer.borderWidth = 1
-        connectGoogle.layer.borderColor = UIColor.primaryGray?.cgColor
         connectGoogle.snp.makeConstraints { make in
-            make.bottom.equalTo(signUpSubButton.snp.top).offset(-24)
+            make.bottom.equalTo(signUpSubButton.snp.top).offset(-16)
             make.centerX.equalToSuperview()
-            make.width.equalTo(80)
-            make.height.equalTo(56)
         }
-        connectGoogle.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
-        lazy var connectApple = UIButton()
+        lazy var connectApple = CustomConnectionSmallButton(connectionLogo: .Google, currentVC: self, destinationVC: LogInAccountVC())
         view.addSubview(connectApple)
-        connectApple.setImage(UIImage(named: "Google"), for: .normal)
-        connectApple.layer.cornerRadius = 20
-        connectApple.layer.borderWidth = 1
-        connectApple.layer.borderColor = UIColor.primaryGray?.cgColor
         connectApple.snp.makeConstraints { make in
             make.leading.equalTo(connectGoogle.snp.trailing).offset(16)
             make.centerY.equalTo(connectGoogle)
-            make.width.equalTo(80)
-            make.height.equalTo(56)
         }
-        connectGoogle.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+     
         
-        lazy var connectFacebook = UIButton()
+        lazy var connectFacebook = CustomConnectionSmallButton(connectionLogo: .Facebook, currentVC: self, destinationVC: LogInAccountVC())
         view.addSubview(connectFacebook)
-        connectFacebook.setImage(UIImage(named: "Facebook"), for: .normal)
-        connectFacebook.layer.cornerRadius = 20
-        connectFacebook.layer.borderWidth = 1
-        connectFacebook.layer.borderColor = UIColor.primaryGray?.cgColor
         connectFacebook.snp.makeConstraints { make in
             make.trailing.equalTo(connectGoogle.snp.leading).offset(-16)
             make.centerY.equalTo(connectGoogle)
-            make.width.equalTo(80)
-            make.height.equalTo(56)
         }
-        connectFacebook.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
         lazy var continueLabel = UILabel()
         view.addSubview(continueLabel)
@@ -147,29 +109,23 @@ class LogInAccountVC: UIViewController {
         }
         forgetPasswordButton.addTarget(self, action: #selector(forgetButtonTapped), for: .touchUpInside)
         
-        lazy var signInButton = CustomPrimaryLargeButton(title: "Sign In", currentVC: self, destinationVC: OpeningVC())
+        lazy var signInButton = CustomPrimaryLargeButton(title: "Sign In")
         view.addSubview(signInButton)
         signInButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().offset(-32)
             make.bottom.equalTo(forgetPasswordButton.snp.top).offset(-24)
         }
+        signInButton.addTarget(self, action: #selector(gotoCongrats), for: .touchUpInside)
         
-        
-        
-        
-    }
-    @objc func buttonTapped(){
-        Presentation.presentVC(currentVC: self, destinationVC: OpeningVC(), toDirection: .right)
-    }
-    
-    @objc func clickButtonDidSelected(_ sender: UIButton){
-        sender.backgroundColor = sender.backgroundColor == UIColor.white ? .primaryGreen : UIColor.white
-
     }
     
     @objc func forgetButtonTapped(){
-        Presentation.presentVC(currentVC: self, destinationVC: OpeningVC(), toDirection: .right)
+        Presentation.presentVC(currentVC: self, destinationVC: ForgotPasswordVC(), toDirection: .right)
+    }
+    
+    @objc func gotoCongrats(){
+        Presentation.presentAsPageSheet(currentVC: self, destinationVC: CongratsPopVC())
     }
     
 }
