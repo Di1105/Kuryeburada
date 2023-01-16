@@ -29,9 +29,14 @@
 		C65ADC5729746D31001FCF2C /* CustomRememberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5629746D31001FCF2C /* CustomRememberButton.swift */; };
 		C65ADC59297483BF001FCF2C /* CustomConnectionSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC58297483BF001FCF2C /* CustomConnectionSmallButton.swift */; };
 		C65ADC5B29749325001FCF2C /* CustomViaSendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5A29749325001FCF2C /* CustomViaSendButton.swift */; };
-		C65ADC5D29749EE4001FCF2C /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5C29749EE4001FCF2C /* DataClass.swift */; };
+		C65ADC5D29749EE4001FCF2C /* DataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5C29749EE4001FCF2C /* DataStruct.swift */; };
 		C65ADC5F2974A3BD001FCF2C /* CustomBankButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5E2974A3BD001FCF2C /* CustomBankButton.swift */; };
 		C65ADC612974A606001FCF2C /* CustomHomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC602974A606001FCF2C /* CustomHomeButton.swift */; };
+		C65ADC63297532F7001FCF2C /* CollectionTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC62297532F7001FCF2C /* CollectionTopCell.swift */; };
+		C65ADC6529753822001FCF2C /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC6429753822001FCF2C /* CustomCollectionView.swift */; };
+		C65ADC6729753B46001FCF2C /* CollectionBackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC6629753B46001FCF2C /* CollectionBackCell.swift */; };
+		C65ADC6929754DF1001FCF2C /* CustomTransitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC6829754DF1001FCF2C /* CustomTransitView.swift */; };
+		C65ADC6B29755948001FCF2C /* CustomTransitSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC6A29755948001FCF2C /* CustomTransitSmallView.swift */; };
 		C67E51582970A2C10030A00C /* SendPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E51572970A2C10030A00C /* SendPinVC.swift */; };
 		C67E515C2970AD7B0030A00C /* CreateNewPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E515B2970AD7B0030A00C /* CreateNewPasswordVC.swift */; };
 		C6BFB4A1296C41B70059FFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BFB4A0296C41B70059FFAE /* AppDelegate.swift */; };
@@ -92,9 +97,14 @@
 		C65ADC5629746D31001FCF2C /* CustomRememberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRememberButton.swift; sourceTree = "<group>"; };
 		C65ADC58297483BF001FCF2C /* CustomConnectionSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConnectionSmallButton.swift; sourceTree = "<group>"; };
 		C65ADC5A29749325001FCF2C /* CustomViaSendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViaSendButton.swift; sourceTree = "<group>"; };
-		C65ADC5C29749EE4001FCF2C /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		C65ADC5C29749EE4001FCF2C /* DataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
 		C65ADC5E2974A3BD001FCF2C /* CustomBankButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBankButton.swift; sourceTree = "<group>"; };
 		C65ADC602974A606001FCF2C /* CustomHomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHomeButton.swift; sourceTree = "<group>"; };
+		C65ADC62297532F7001FCF2C /* CollectionTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTopCell.swift; sourceTree = "<group>"; };
+		C65ADC6429753822001FCF2C /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
+		C65ADC6629753B46001FCF2C /* CollectionBackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBackCell.swift; sourceTree = "<group>"; };
+		C65ADC6829754DF1001FCF2C /* CustomTransitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitView.swift; sourceTree = "<group>"; };
+		C65ADC6A29755948001FCF2C /* CustomTransitSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitSmallView.swift; sourceTree = "<group>"; };
 		C67E51572970A2C10030A00C /* SendPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPinVC.swift; sourceTree = "<group>"; };
 		C67E515B2970AD7B0030A00C /* CreateNewPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordVC.swift; sourceTree = "<group>"; };
 		C6BFB49D296C41B70059FFAE /* Kuryeburada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuryeburada.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +194,9 @@
 			children = (
 				C6BFB4C6296C45010059FFAE /* CustomHeaderViewSil.swift */,
 				C63C41B52972B66900348C87 /* CustomHeaderView.swift */,
+				C65ADC6429753822001FCF2C /* CustomCollectionView.swift */,
+				C65ADC6829754DF1001FCF2C /* CustomTransitView.swift */,
+				C65ADC6A29755948001FCF2C /* CustomTransitSmallView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,7 +322,9 @@
 				C63C41AA29714F2500348C87 /* InboxVC.swift */,
 				C63C41AC29714F5200348C87 /* ProfileVC.swift */,
 				C63C41B22971995200348C87 /* HomeCollectionVCell.swift */,
-				C65ADC5C29749EE4001FCF2C /* DataClass.swift */,
+				C65ADC5C29749EE4001FCF2C /* DataStruct.swift */,
+				C65ADC62297532F7001FCF2C /* CollectionTopCell.swift */,
+				C65ADC6629753B46001FCF2C /* CollectionBackCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -425,6 +440,7 @@
 				C65ADC59297483BF001FCF2C /* CustomConnectionSmallButton.swift in Sources */,
 				C6BFB4D6296C45200059FFAE /* CustomSecondaryLargeButton.swift in Sources */,
 				C63C41AB29714F2500348C87 /* InboxVC.swift in Sources */,
+				C65ADC6729753B46001FCF2C /* CollectionBackCell.swift in Sources */,
 				C67E515C2970AD7B0030A00C /* CreateNewPasswordVC.swift in Sources */,
 				C6C3C82B296D47A9000AE4CE /* Intro2VC.swift in Sources */,
 				C6BFB4CC296C45020059FFAE /* CustomNormalLabel.swift in Sources */,
@@ -446,19 +462,23 @@
 				C6C3C83F296FFD77000AE4CE /* FillYourProfileVC.swift in Sources */,
 				C6BFB4C2296C44E40059FFAE /* CustomEditableTextView.swift in Sources */,
 				C6C3C84329702398000AE4CE /* CreateNewPinVC.swift in Sources */,
+				C65ADC6529753822001FCF2C /* CustomCollectionView.swift in Sources */,
 				C6BFB4CA296C45020059FFAE /* CustomFirstHeadLabel.swift in Sources */,
+				C65ADC6929754DF1001FCF2C /* CustomTransitView.swift in Sources */,
 				C6BFB4B9296C42DE0059FFAE /* CustomColor.swift in Sources */,
 				C60E7A46296C9222005754F9 /* Font.swift in Sources */,
 				C6BFB4CB296C45020059FFAE /* CustomHeaderViewSil.swift in Sources */,
 				C6C3C84C2970587C000AE4CE /* ForgotPasswordVC.swift in Sources */,
+				C65ADC6B29755948001FCF2C /* CustomTransitSmallView.swift in Sources */,
 				C6C3C84129701310000AE4CE /* PinMapVC.swift in Sources */,
 				C67E51582970A2C10030A00C /* SendPinVC.swift in Sources */,
 				C6BFB4CD296C45020059FFAE /* CustomNormalHeadLabel.swift in Sources */,
 				C60E7A38296C4C1A005754F9 /* Presentation.swift in Sources */,
+				C65ADC63297532F7001FCF2C /* CollectionTopCell.swift in Sources */,
 				C6BFB4C4296C44E40059FFAE /* CustomTextField.swift in Sources */,
 				C65ADC5B29749325001FCF2C /* CustomViaSendButton.swift in Sources */,
 				C60E7A3D296C5B40005754F9 /* SceneDelegate.swift in Sources */,
-				C65ADC5D29749EE4001FCF2C /* DataClass.swift in Sources */,
+				C65ADC5D29749EE4001FCF2C /* DataStruct.swift in Sources */,
 				C6BFB4CE296C45020059FFAE /* CustomSecondHeadLabel.swift in Sources */,
 				C6BFB4D4296C45200059FFAE /* CustomPrimaryLargeButton.swift in Sources */,
 				C6C3C829296CA5D5000AE4CE /* CustomIntroLabel.swift in Sources */,

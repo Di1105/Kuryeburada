@@ -63,7 +63,7 @@ class ForgotPasswordVC: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        lazy var continueButton = CustomPrimaryLargeButton(title: "Continue", currentVC: self, destinationVC: CreateNewPasswordVC())
+        lazy var continueButton = CustomPrimaryLargeButton(title: "Continue", currentVC: self, destinationVC: SendPinVC())
         view.addSubview(continueButton)
         continueButton.snp.makeConstraints { make in
             make.width.equalToSuperview().offset(-32)
