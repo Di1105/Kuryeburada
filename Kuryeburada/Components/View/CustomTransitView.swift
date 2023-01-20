@@ -9,11 +9,14 @@ import UIKit
 
 class CustomTransitView: UIView{
     
+    lazy var destinationViewController = UIViewController()
+    lazy var currentViewController = UIViewController()
     lazy var transitImg = UIImageView()
     lazy var transitLbl = UILabel()
     lazy var transitInfoLbl = UILabel()
     lazy var caseLabel = UILabel()
     lazy var bigButton = UIButton()
+
 
     
     override init(frame: CGRect) {
@@ -35,7 +38,7 @@ class CustomTransitView: UIView{
   
     }
     
-    init(transitLabel: String, infoText: String, transitImage: String, caseText: String, bigButtonText: String ){
+    init(transitLabel: String, infoText: String, transitImage: String, caseText: String, bigButtonText: String, currentVC: UIViewController, destinationVC: UIViewController ){
         super.init(frame: .zero)
         configureUI()
         transitLbl.text = transitLabel
@@ -43,8 +46,10 @@ class CustomTransitView: UIView{
         transitImg.image = UIImage(named: "\(transitImage)")
         caseLabel.text = caseText
         bigButton.setTitle(bigButtonText, for: .normal)
-
+        destinationViewController = destinationVC
+        currentViewController = currentVC
     }
+    
     
     private func configureUI(){
         
@@ -80,24 +85,24 @@ class CustomTransitView: UIView{
         
         addSubview(transitInfoLbl)
         transitInfoLbl.textColor = .primaryGray
-        transitInfoLbl.font = Font.labelFont()
+        transitInfoLbl.font = Font.textField()
         transitInfoLbl.snp.makeConstraints { make in
             make.leading.equalTo(transitLbl)
             make.bottom.equalTo(transitImg).offset(-8)
         }
        
         addSubview(caseLabel)
-        caseLabel.textColor = .white
-        caseLabel.backgroundColor = .secondaryGreen
+        caseLabel.textColor = .secondaryGreen
+        caseLabel.backgroundColor = .primaryLightBack
         caseLabel.layer.cornerRadius = 10
         caseLabel.layer.masksToBounds = true
         caseLabel.textAlignment = .center
-        caseLabel.font = Font.labelFont()
+        caseLabel.font = Font.custom(size: 12, fontWeight: .medium)
         caseLabel.snp.makeConstraints { make in
             make.centerY.equalTo(transitImg)
             make.trailing.equalToSuperview().offset(-16)
             make.height.equalTo(32)
-            make.width.equalTo(100)
+            make.width.equalTo(80)
         }
                 
         addSubview(bigButton)
@@ -108,11 +113,35 @@ class CustomTransitView: UIView{
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().offset(-32)
             make.height.equalTo(48)
+        }
+        bigButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        /*
+        addSubview(firstSmallButton)
+        bigButton.backgroundColor = .secondaryGreen
+        bigButton.layer.cornerRadius = 24
+        bigButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-16)
+            make.leading.equalToSuperview().offset(16)
+            make.width.equalTo(160)
+            make.height.equalTo(48)
  
         }
         
+        addSubview(secondSmallButton)
+        bigButton.backgroundColor = .secondaryGreen
+        bigButton.layer.cornerRadius = 24
+        bigButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-16)
+            make.leading.equalToSuperview().offset(-16)
+            make.width.equalTo(160)
+            make.height.equalTo(48)
+ 
+        }
+        */
          
     }
-
+    @objc func buttonTapped(){
+        Presentation.presentVC(currentVC: currentViewController, destinationVC: destinationViewController, toDirection: .right)
+    }
     
 }

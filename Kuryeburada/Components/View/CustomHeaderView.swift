@@ -18,6 +18,7 @@ class CustomHeaderView: UIView {
     lazy var currentViewController = UIViewController()
     lazy var headImageButton = UIButton()
     lazy var righIconButton = UIButton()
+    lazy var firstRightIcon = UIButton()
     
 
 
@@ -58,6 +59,17 @@ class CustomHeaderView: UIView {
         self.righIconButton.setImage(UIImage(named: rightButtonIcon), for: .normal)
         self.destinationViewController = destinationVC
         self.currentViewController = currentVC
+    }
+    
+    init(leftButtonImage: String, leftOneText: String, firstRightIcon: String, rightButtonIcon: String, currentVC: UIViewController, destinationVC: UIViewController){
+        super.init(frame: .zero)
+        configureUI()
+        self.headImageButton.setImage(UIImage(named: leftButtonImage), for: .normal)
+        self.leftOneLabel.text = leftOneText
+        self.righIconButton.setImage(UIImage(named: rightButtonIcon), for: .normal)
+        self.destinationViewController = destinationVC
+        self.currentViewController = currentVC
+        self.firstRightIcon.setImage(UIImage(named: "\(firstRightIcon)"), for: .normal)
     }
     
     private func configureUI(){
@@ -121,6 +133,13 @@ class CustomHeaderView: UIView {
             make.height.width.equalTo(40)
         }
         
+        addSubview(firstRightIcon)
+        firstRightIcon.setTitleColor(.secondaryGreen, for: .normal)
+        firstRightIcon.snp.makeConstraints { make in
+            make.centerY.equalTo(headImageButton)
+            make.trailing.equalTo(righIconButton.snp.leading).offset(-16)
+            make.height.width.equalTo(40)
+        }
      
                 
     }

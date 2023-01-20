@@ -10,6 +10,8 @@ import SnapKit
 
 class CustomSearchBar: UISearchBar {
 
+    lazy var barkodImage = UIImageView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -26,6 +28,12 @@ class CustomSearchBar: UISearchBar {
         configure()
     }
     
+    init(placeholder : String , leftIcon: String) {
+        super.init(frame: .zero)
+        self.placeholder = placeholder
+        configure()
+        barkodImage.image = UIImage(named: leftIcon)
+    }
     
     private func configure(){
         snp.makeConstraints { make in
@@ -43,6 +51,12 @@ class CustomSearchBar: UISearchBar {
         barStyle = .default
         searchTextField.borderStyle = .bezel
         barTintColor = .white
+        
+        addSubview(barkodImage)
+        barkodImage.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-16)
+            make.centerY.equalToSuperview()
+        }
         
     }
     

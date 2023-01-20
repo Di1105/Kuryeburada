@@ -20,7 +20,7 @@ class FillYourProfileVC: UIViewController,UIImagePickerControllerDelegate & UINa
     
     func setupUI(){
         
-        lazy var headerView = CustomHeaderView(leftButtonImage: "left", middleHeaderText: "Fill Your Profile", currentVC: self, destinationVC: CreateAccountVC())
+        lazy var headerView = CustomHeaderView(leftButtonImage: "left", leftOneText: "Fill Your Profile", rightButtonIcon: "", currentVC: self, destinationVC: CreateAccountVC())
         view.addSubview(headerView)
         headerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -40,6 +40,19 @@ class FillYourProfileVC: UIViewController,UIImagePickerControllerDelegate & UINa
         profileImage.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(selectPhoto))
         profileImage.addGestureRecognizer(gesture)
+        
+        lazy var pencilImage = UIImageView()
+        view.addSubview(pencilImage)
+        pencilImage.image = UIImage(named: "pencil")
+        pencilImage.layer.cornerRadius = 5
+        pencilImage.clipsToBounds = true
+        pencilImage.snp.makeConstraints { make in
+            make.trailing.equalTo(profileImage)
+            make.bottom.equalTo(profileImage)
+            make.height.width.equalTo(30)
+
+        }
+        
 
         
         lazy var continueButton = CustomPrimaryLargeButton(title: "Continue", currentVC: self, destinationVC: PinMapVC())

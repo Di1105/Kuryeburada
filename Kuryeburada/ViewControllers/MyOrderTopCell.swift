@@ -7,7 +7,8 @@
 
 import UIKit
 
-class CollectionTopCell: UICollectionViewCell {
+class MyOrderTopCell: UICollectionViewCell {
+  
   static let identifier = "TopCell"
 
   var collectionButton = UIButton()
@@ -26,6 +27,7 @@ class CollectionTopCell: UICollectionViewCell {
       
       addSubview(collectionButton)
       collectionButton.frame = CGRect(x: 0, y: 0, width: contentView.frame.size.width, height: contentView.frame.size.height)
+      collectionButton.titleLabel?.font = Font.custom(size: 14, fontWeight: .medium)
       collectionButton.layer.borderWidth = 1
       collectionButton.clipsToBounds = true
       collectionButton.layer.cornerRadius = 15
