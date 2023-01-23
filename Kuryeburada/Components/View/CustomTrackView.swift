@@ -57,11 +57,11 @@ class CustomTrackView: UIView {
         }
         
         addSubview(secondLabel)
-        secondLabel.font = Font.labelFont()
+        secondLabel.font = Font.textFont()
         secondLabel.textAlignment = .center
         secondLabel.textColor = .primaryGray
         secondLabel.snp.makeConstraints { make in
-            make.top.equalTo(firstLabel.snp.bottom).offset(8)
+            make.top.equalTo(firstLabel.snp.bottom).offset(4)
             make.centerX.equalTo(firstLabel)
         }
        

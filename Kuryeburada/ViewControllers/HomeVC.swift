@@ -57,7 +57,7 @@ class HomeVC: UIViewController,UISearchBarDelegate, UICollectionViewDelegate, UI
             make.top.equalTo(seacrhBar.snp.bottom).offset(16)
             make.width.equalToSuperview().offset(-32)
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-100)
+            make.bottom.equalToSuperview()
         }
 
         lazy var makeOrderButton = CustomHomeVCButton(buttonImage: "pencil", buttonLabel: "Make Order")

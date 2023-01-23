@@ -83,7 +83,7 @@ class MyOrderVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             make.bottom.equalToSuperview()
         }
         
-        lazy var collectionHeader = CustomTransitView(transitLabel: "SK12353246", infoText: "On transit area", transitImage: "wal", caseText: "On Process", bigButtonText: "Track", currentVC: self, destinationVC: MyOrderVC())
+        lazy var collectionHeader = CustomTransitView(transitLabel: "SK12353246", infoText: "On transit area", transitImage: "wal", caseText: "On Process", bigButtonText: "Track", currentVC: self, destinationVC: TrackVC())
         collectionViewBack.addSubview(collectionHeader)
         collectionHeader.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(8)
@@ -115,7 +115,6 @@ class MyOrderVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         if collectionView == self.collectionViewTop {
             let cellTop = collectionView.dequeueReusableCell(withReuseIdentifier: MyOrderTopCell.identifier, for: indexPath) as! MyOrderTopCell
             cellTop.collectionButton.setTitle(data.collectionTopArray[indexPath.row], for: .normal)
-                // Set up cell
                 return cellTop
             }
         else if collectionView == self.collectionViewBack{
@@ -125,8 +124,6 @@ class MyOrderVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 cellBack1.transitLbl.text = data.transitCodeArray[indexPath.row]
                 cellBack1.transitInfoLbl.text = data.transitInfoArray[indexPath.row]
                 cellBack1.caseLabel.text = data.transitCase[indexPath.row]
-
-                    // ...Set up cell
 
                     return cellBack1
             }else{
@@ -143,27 +140,3 @@ class MyOrderVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
 }
 
 
-/*
- 
- let cell = UICollectionViewCell()
-
-  switch collectionView{
-     case collectionViewTop:
-         let cellTop = collectionView.dequeueReusableCell(withReuseIdentifier:  MyOrderTopCell.identifier, for: indexPath) as! MyOrderTopCell
-         cellTop.collectionButton.setTitle(data.collectionTopArray[indexPath.row], for: .normal)
-         return cellTop
-     case collectionViewBack:
-          if segmentedController.selectedSegmentIndex == 0{
-              let cellBack = collectionView.dequeueReusableCell(withReuseIdentifier:     MyOrderFromMeCell.identifier, for: indexPath) as! MyOrderFromMeCell
-              cellBack.transitImg.image = UIImage(named: "person")
-              return cellBack
-          }else if segmentedController.selectedSegmentIndex == 1{
-              let cellBack2 = collectionView.dequeueReusableCell(withReuseIdentifier:     MyOrderToMeCell.identifier, for: indexPath) as! MyOrderToMeCell
-              cellBack2.transitImg.image = UIImage(named: "phone")
-              return cellBack2
-          }
-     default:
-         print("cell error")
-  }
-  return cell
- */

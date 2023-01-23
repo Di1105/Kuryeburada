@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C60C1CBA29794DF100F548F9 /* MyOrderToMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C1CB929794DF100F548F9 /* MyOrderToMeCell.swift */; };
-		C60C1CBC29796FE400F548F9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C1CBB29796FE400F548F9 /* Font.swift */; };
 		C60C1CBE2979990800F548F9 /* CustomProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C1CBD2979990800F548F9 /* CustomProfileView.swift */; };
 		C60C1CC029799D4C00F548F9 /* CustomTrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C1CBF29799D4C00F548F9 /* CustomTrackCellView.swift */; };
 		C60E7A2A296C485C005754F9 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60E7A24296C485B005754F9 /* Poppins-Medium.ttf */; };
@@ -32,7 +31,6 @@
 		C65ADC5729746D31001FCF2C /* CustomRememberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5629746D31001FCF2C /* CustomRememberButton.swift */; };
 		C65ADC59297483BF001FCF2C /* CustomConnectionSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC58297483BF001FCF2C /* CustomConnectionSmallButton.swift */; };
 		C65ADC5B29749325001FCF2C /* CustomViaSendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5A29749325001FCF2C /* CustomViaSendButton.swift */; };
-		C65ADC5D29749EE4001FCF2C /* DataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5C29749EE4001FCF2C /* DataStruct.swift */; };
 		C65ADC5F2974A3BD001FCF2C /* CustomBankButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC5E2974A3BD001FCF2C /* CustomBankButton.swift */; };
 		C65ADC612974A606001FCF2C /* CustomHomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC602974A606001FCF2C /* CustomHomeButton.swift */; };
 		C65ADC63297532F7001FCF2C /* MyOrderTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65ADC62297532F7001FCF2C /* MyOrderTopCell.swift */; };
@@ -80,11 +78,13 @@
 		C6C3C84629703F34000AE4CE /* CHIOTPField in Frameworks */ = {isa = PBXBuildFile; productRef = C6C3C84529703F34000AE4CE /* CHIOTPField */; };
 		C6C3C84829704254000AE4CE /* SetFingerPrintVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C84729704254000AE4CE /* SetFingerPrintVC.swift */; };
 		C6C3C84C2970587C000AE4CE /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3C84B2970587C000AE4CE /* ForgotPasswordVC.swift */; };
+		C6D9252F297DD5C200BF7C6D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D9252E297DD5C200BF7C6D /* Font.swift */; };
+		C6EB7225297DE40500426D93 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB7224297DE40500426D93 /* data.swift */; };
+		C6EB7227297DEA4200426D93 /* CustomProfileVCButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB7226297DEA4200426D93 /* CustomProfileVCButton2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C60C1CB929794DF100F548F9 /* MyOrderToMeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderToMeCell.swift; sourceTree = "<group>"; };
-		C60C1CBB29796FE400F548F9 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Font.swift; path = "../../../../GeyimBuradaMine/GeyimBurada-main/Geyim Burada/Constants/Fonts/Font.swift"; sourceTree = "<group>"; };
 		C60C1CBD2979990800F548F9 /* CustomProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProfileView.swift; sourceTree = "<group>"; };
 		C60C1CBF29799D4C00F548F9 /* CustomTrackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTrackCellView.swift; sourceTree = "<group>"; };
 		C60E7A24296C485B005754F9 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 		C65ADC5629746D31001FCF2C /* CustomRememberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRememberButton.swift; sourceTree = "<group>"; };
 		C65ADC58297483BF001FCF2C /* CustomConnectionSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConnectionSmallButton.swift; sourceTree = "<group>"; };
 		C65ADC5A29749325001FCF2C /* CustomViaSendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViaSendButton.swift; sourceTree = "<group>"; };
-		C65ADC5C29749EE4001FCF2C /* DataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
 		C65ADC5E2974A3BD001FCF2C /* CustomBankButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBankButton.swift; sourceTree = "<group>"; };
 		C65ADC602974A606001FCF2C /* CustomHomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHomeButton.swift; sourceTree = "<group>"; };
 		C65ADC62297532F7001FCF2C /* MyOrderTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderTopCell.swift; sourceTree = "<group>"; };
@@ -154,6 +153,9 @@
 		C6C3C84229702398000AE4CE /* CreateNewPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPinVC.swift; sourceTree = "<group>"; };
 		C6C3C84729704254000AE4CE /* SetFingerPrintVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFingerPrintVC.swift; sourceTree = "<group>"; };
 		C6C3C84B2970587C000AE4CE /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		C6D9252E297DD5C200BF7C6D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		C6EB7224297DE40500426D93 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		C6EB7226297DEA4200426D93 /* CustomProfileVCButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProfileVCButton2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				C65ADC5A29749325001FCF2C /* CustomViaSendButton.swift */,
 				C65ADC5E2974A3BD001FCF2C /* CustomBankButton.swift */,
 				C65ADC602974A606001FCF2C /* CustomHomeButton.swift */,
+				C6EB7226297DEA4200426D93 /* CustomProfileVCButton2.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -332,17 +335,17 @@
 				C67E515B2970AD7B0030A00C /* CreateNewPasswordVC.swift */,
 				C63C41A429714DC000348C87 /* CongratsPopVC.swift */,
 				C63C41A629714EFE00348C87 /* HomeVC.swift */,
-				C63C41A829714F1800348C87 /* MyOrderVC.swift */,
-				C65ADC6C29757621001FCF2C /* TrackVC.swift */,
-				C63C41AA29714F2500348C87 /* InboxVC.swift */,
-				C63C41AC29714F5200348C87 /* ProfileVC.swift */,
 				C63C41B22971995200348C87 /* HomeCollectionVCell.swift */,
-				C65ADC5C29749EE4001FCF2C /* DataStruct.swift */,
+				C63C41A829714F1800348C87 /* MyOrderVC.swift */,
 				C65ADC62297532F7001FCF2C /* MyOrderTopCell.swift */,
 				C60C1CB929794DF100F548F9 /* MyOrderToMeCell.swift */,
 				C65ADC6629753B46001FCF2C /* MyOrderFromMeCell.swift */,
+				C65ADC6C29757621001FCF2C /* TrackVC.swift */,
+				C63C41AA29714F2500348C87 /* InboxVC.swift */,
 				C65ADC7229759C34001FCF2C /* InboxChatsCell.swift */,
 				C65ADC7429767B6A001FCF2C /* InboxCallsCell.swift */,
+				C63C41AC29714F5200348C87 /* ProfileVC.swift */,
+				C6EB7224297DE40500426D93 /* data.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -355,7 +358,7 @@
 				C60E7A24296C485B005754F9 /* Poppins-Medium.ttf */,
 				C60E7A25296C485B005754F9 /* Poppins-Regular.ttf */,
 				C60E7A26296C485B005754F9 /* Poppins-SemiBold.ttf */,
-				C60C1CBB29796FE400F548F9 /* Font.swift */,
+				C6D9252E297DD5C200BF7C6D /* Font.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -465,16 +468,18 @@
 				C63C41A529714DC000348C87 /* CongratsPopVC.swift in Sources */,
 				C65ADC7329759C34001FCF2C /* InboxChatsCell.swift in Sources */,
 				C6C3C83B296DA87A000AE4CE /* CreateAccountVC.swift in Sources */,
-				C60C1CBC29796FE400F548F9 /* Font.swift in Sources */,
 				C6C3C82F296D4A59000AE4CE /* Intro1VC.swift in Sources */,
 				C6BFB4D5296C45200059FFAE /* CustomSecondarySmallButton.swift in Sources */,
 				C6BFB4C3296C44E40059FFAE /* CustomNonEditTextView.swift in Sources */,
+				C6EB7225297DE40500426D93 /* data.swift in Sources */,
 				C6C3C831296D647D000AE4CE /* CustomIntroTextView.swift in Sources */,
 				C6BFB4BE296C443E0059FFAE /* CustomSearchBar.swift in Sources */,
 				C63C41A729714EFE00348C87 /* HomeVC.swift in Sources */,
+				C6D9252F297DD5C200BF7C6D /* Font.swift in Sources */,
 				C6C3C835296D8FC7000AE4CE /* CustomBottomSignButton.swift in Sources */,
 				C63C41B32971995200348C87 /* HomeCollectionVCell.swift in Sources */,
 				C63C41AD29714F5200348C87 /* ProfileVC.swift in Sources */,
+				C6EB7227297DEA4200426D93 /* CustomProfileVCButton2.swift in Sources */,
 				C6C3C83D296FF453000AE4CE /* LogInAccountVC.swift in Sources */,
 				C63C41B62972B66900348C87 /* CustomHeaderView.swift in Sources */,
 				C6BFB4A1296C41B70059FFAE /* AppDelegate.swift in Sources */,
@@ -502,7 +507,6 @@
 				C6BFB4C4296C44E40059FFAE /* CustomTextField.swift in Sources */,
 				C65ADC5B29749325001FCF2C /* CustomViaSendButton.swift in Sources */,
 				C60E7A3D296C5B40005754F9 /* SceneDelegate.swift in Sources */,
-				C65ADC5D29749EE4001FCF2C /* DataStruct.swift in Sources */,
 				C6BFB4CE296C45020059FFAE /* CustomSecondHeadLabel.swift in Sources */,
 				C6BFB4D4296C45200059FFAE /* CustomPrimaryLargeButton.swift in Sources */,
 				C6C3C829296CA5D5000AE4CE /* CustomIntroLabel.swift in Sources */,

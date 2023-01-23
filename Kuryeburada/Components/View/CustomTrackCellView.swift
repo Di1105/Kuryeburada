@@ -58,48 +58,48 @@ class CustomTrackCellView: UIView {
         
         backgroundColor = .white
         snp.makeConstraints { make in
-            make.height.equalTo(92)
+            make.height.equalTo(56)
         }
         
         addSubview(profileImage)
-        profileImage.layer.cornerRadius = 30
+        profileImage.layer.cornerRadius = 28
         profileImage.layer.masksToBounds = false
         profileImage.clipsToBounds = true
         profileImage.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(16)
-            make.width.height.equalTo(60)
+            make.width.height.equalTo(56)
         }
         
         addSubview(iconImage)
-        iconImage.layer.cornerRadius = 15
+        iconImage.layer.cornerRadius = 12
         iconImage.layer.masksToBounds = false
+        iconImage.tintColor = .primaryGray
         iconImage.clipsToBounds = true
         iconImage.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(16)
-            make.width.height.equalTo(40)
+            make.width.height.equalTo(24)
         }
         
         addSubview(leftHeader)
-        leftHeader.font = .systemFont(ofSize: 20)
-        leftHeader.textColor = .black
-        leftHeader.layer.cornerRadius = 20
+        leftHeader.font = Font.header2()
+        leftHeader.textColor = .primaryDarkBlue
         leftHeader.text = "........"
         leftHeader.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(30)
-            make.leading.equalTo(profileImage.snp.trailing).offset(10)
+            make.top.equalTo(profileImage).offset(4)
+            make.leading.equalTo(profileImage.snp.trailing).offset(8)
+            make.trailing.equalToSuperview().offset(-16)
+
         }
 
         
         addSubview(InfoLabel)
-        InfoLabel.font = UIFont.systemFont(ofSize: 14)
+        InfoLabel.font = Font.textFont()
         InfoLabel.textColor = .gray
-        InfoLabel.layer.cornerRadius = 20
-        InfoLabel.text = "..............."
         InfoLabel.snp.makeConstraints { make in
-            make.top.equalTo(leftHeader.snp.bottom).offset(6)
-            make.leading.equalTo(profileImage.snp.trailing).offset(12)
+            make.bottom.equalTo(profileImage.snp.bottom).offset(-4)
+            make.leading.equalTo(leftHeader)
         }
 
         

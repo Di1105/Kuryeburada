@@ -26,8 +26,6 @@ class TrackVC: UIViewController {
         
         
         lazy var secondView = CustomTrackCellView(profileImage: "profile", profileName: "Angela Blabla", messageText: "4.8 Rates", secondButtonName: "email" , oneButtonName: "phone", currentVC: self, destinationVC: TrackVC())
-        
-       
         view.addSubview(secondView)
         secondView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom).offset(16)
@@ -45,7 +43,7 @@ class TrackVC: UIViewController {
         lazy var trackMiddle = CustomTrackView(headImage: "pay", firstText: "2-3 days", secondText: "Estimate")
         view.addSubview(trackMiddle)
         trackMiddle.snp.makeConstraints { make in
-            make.top.equalTo(secondView.snp.bottom).offset(8)
+            make.top.equalTo(secondView.snp.bottom).offset(16)
             make.centerX.equalToSuperview()
             make.width.equalTo(view.frame.size.width/4)
         }
@@ -81,36 +79,37 @@ class TrackVC: UIViewController {
         scrollView.addSubview(step1View)
         step1View.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
-            make.leading.equalToSuperview().offset(16)
+            make.width.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()
         }
         
         lazy var step2View = CustomTrackCellView(iconImage: "alert", profileName: "52325 Clyde Galler Park DC", messageText: "Waiting", secondButtonName: "", oneButtonName: "", currentVC: self, destinationVC: TrackVC())
         scrollView.addSubview(step2View)
         step2View.snp.makeConstraints { make in
             make.top.equalTo(step1View.snp.bottom).offset(16)
-            make.leading.equalToSuperview().offset(16)
-        }
+            make.width.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()        }
         
         lazy var step3View = CustomTrackCellView(iconImage: "alert", profileName: "732 Sunny Side DC", messageText: "Waiting", secondButtonName: "", oneButtonName: "", currentVC: self, destinationVC: TrackVC())
         scrollView.addSubview(step3View)
         step3View.snp.makeConstraints { make in
             make.top.equalTo(step2View.snp.bottom).offset(16)
-            make.leading.equalToSuperview().offset(16)
-        }
+            make.width.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()        }
         
         lazy var step4View = CustomTrackCellView(iconImage: "alert", profileName: "7732 Lakexood Garden DC", messageText: "Waiting",secondButtonName: "", oneButtonName: "", currentVC: self, destinationVC: TrackVC())
         scrollView.addSubview(step4View)
         step4View.snp.makeConstraints { make in
             make.top.equalTo(step3View.snp.bottom).offset(16)
-            make.leading.equalToSuperview().offset(16)
-        }
+            make.width.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()        }
         
         lazy var step5View = CustomTrackCellView(iconImage: "alert", profileName: "67089 Messrsmith Harden Stret DC", messageText: "Waiting", secondButtonName: "", oneButtonName: "", currentVC: self, destinationVC: TrackVC())
         scrollView.addSubview(step5View)
         step5View.snp.makeConstraints { make in
             make.top.equalTo(step4View.snp.bottom).offset(16)
-            make.leading.equalToSuperview().offset(16)
-        }
+            make.width.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()        }
         
     }
 

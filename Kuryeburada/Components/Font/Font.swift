@@ -1,14 +1,14 @@
 //
-//  CustomFont.swift
+//  Font.swift
 //  Kuryeburada
 //
-//  Created by Dilara Elçioğlu on 9.01.2023.
+//  Created by Dilara Elçioğlu on 22.01.2023.
 //
 
 import UIKit
 
-class Font: UIFont {
-    
+
+final class Font {
     enum FontWeight {
         case light
         case regular
@@ -17,13 +17,29 @@ class Font: UIFont {
         case bold
     }
 
-    static func custom(size: CGFloat , fontWeight: FontWeight ) -> UIFont {
+    static func custom(size: Float, fontWeight: FontWeight) -> UIFont {
         return UIFont(name: "Poppins-\(fontWeight)",
-                      size: size )!
+                      size: CGFloat(size))!
     }
 
+    static func buttonTitle() -> UIFont {
+        return UIFont(name: "Poppins-Bold", size: 16)!
+    }
+
+    static func labelHeader() -> UIFont {
+        return UIFont(name: "Poppins-Bold", size: 16)!
+    }
+    
+    static func labelText() -> UIFont {
+        return UIFont(name: "Poppins-Bold", size: 14 )!
+    }
+    
+    static func textField() -> UIFont {
+        return UIFont(name: "Poppins-Medium", size: 14)!
+    }
+    
     static func header1() -> UIFont {
-        return UIFont(name: "Poppins-Bold", size: 20)!
+        return UIFont(name: "Poppins-Bold", size: 22)!
     }
 
     static func header2() -> UIFont {
@@ -34,8 +50,20 @@ class Font: UIFont {
         return UIFont(name: "Poppins-Bold", size: 16)!
     }
     
-    static func textField() -> UIFont {
-        return UIFont(name: "Poppins-Regular", size: 14)!
+    static func labelFont() -> UIFont {
+        return UIFont(name: "Poppins-Medium", size: 16)!
     }
     
+    static func textFont() -> UIFont {
+        return UIFont(name: "Poppins-Medium", size: 14)!
+    }
+    
+    static func IntroNormal() -> UIFont {
+        return UIFont(name: "Poppins-Bold", size: 32)!
+    }
+    
+    static func header4() -> UIFont {
+        return UIFont(name: "Poppins-Bold", size: 14)!
+    }
 }
+
